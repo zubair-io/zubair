@@ -1,3 +1,0 @@
-{"ts":1373397374781,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
-{"contributors":[],"silentsave":false,"ts":1373397376363,"patch":[[{"diffs":[[1,"#################  \n## npm\n#################\n\nnpm-debug.log\nnode_modules/\n!/node_modules/\n!src/node_modules/"]],"start1":0,"start2":0,"length1":0,"length2":108}]],"length":108,"saved":false}
-{"ts":1373398663240,"patch":[[{"diffs":[[0,"/\n!src/node_modules/"],[1,"\n.c9revisions"]],"start1":88,"start2":88,"length1":20,"length2":33}]],"length":121,"saved":false}
