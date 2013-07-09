@@ -172,7 +172,7 @@
   //  carousel.init();
 
 $(function() {
-    $.getJSON('js/gallery.json', function(data) {
+    $.getJSON('js/gallery.js', function(data) {
   var items = [];
 
  
