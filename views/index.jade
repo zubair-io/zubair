@@ -14,23 +14,46 @@ html
     .navbar.navbar-inverse.navbar-fixed-top
       .navbar-inner
         .container
-          a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+          button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
             span.icon-bar
             span.icon-bar
             span.icon-bar
           a.brand(href='#') Zubair
-    #main.container
-      
-         
-            
-        p
-          a.btn.btn-primary.btn-large Learn more »
-      hr
-      footer
-        p © Company 2012
+          .nav-collapse.collapse
+            ul.nav
+              li.active
+                a(href='#') Home
+              li
+                a(href='#about') About
+              li
+                a(href='#contact') Contact
+              li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown')
+                  | Dropdown
+                  b.caret
+                ul.dropdown-menu
+                  li
+                    a(href='#') Action
+                  li
+                    a(href='#') Another action
+                  li
+                    a(href='#') Something else here
+                  li.divider
+                  li.nav-header Nav header
+                  li
+                    a(href='#') Separated link
+                  li
+                    a(href='#') One more separated link
+                
+                p hello world
+           
+    #main.container.animate
+      p
+        a.btn.btn-primary.btn-large Learn more »
+    hr
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js')
     script
-      window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\\/script>')
+      window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\\\/script>')
     script(src='js/jquery.hammer.js')
     script(src='js/vendor/bootstrap.min.js')
     script(src='http://masonry.desandro.com/masonry.pkgd.min.js')

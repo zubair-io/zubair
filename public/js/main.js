@@ -1,5 +1,4 @@
 
-
     var debug_el = $("#debug");
     function debug(text) {
         debug_el.text(text);
@@ -170,6 +169,51 @@
 
  //   var carousel = new Carousel("#carousel");
   //  carousel.init();
+function ok(){
+        $.getJSON('js/small.js', function(data) {
+  var items = [];
+     $("#main").css( "opacity", "0" );
+  
+ 
+  setTimeout(function(){
+      
+     $("#main").html(""); 
+  
+  
+  
+ 
+$("#main").html("<div id='carousel'></div>");
+ 
+ 
+  $.each(data.gallery, function(key, val) {
+       style ="style='background-image: url("+val.image+");"+
+"background-repeat: no-repeat;"+
+"background-size: contain;"+
+"background-position: center center;'"
+    items.push('<li '+style+'class="image" id="' + key + '">' + val.title + '</li>');
+  });
+ 
+  $('<ul/>', {
+    'class': 'hero-unit',
+    html: items.join('')
+  }).prependTo('#carousel');
+
+var carousel = new Carousel("#carousel");
+   carousel.init();
+    $("#main").css( "opacity", "1" );
+  
+ 
+  },500);
+   
+});
+
+
+
+
+
+    
+}
+
 
 $(function() {
     $.getJSON('js/gallery.js', function(data) {
@@ -189,13 +233,23 @@ $(function() {
     'class': 'hero-unit',
     html: items.join('')
   }).prependTo('#main');
-
-
-});
-
-
-
+ $(".items").click(function () {
+      ok();
+    });
 
     });
 
-    
+window.addEventListener("hashchange", setUrl, false);
+
+
+  
+});
+function setUrl(){
+        
+      var hash = location.hash;
+hash = hash.replace( /^#/, '' )
+
+//alert (hash);
+  history.pushState(null, "Zubair", hash);
+        
+    }

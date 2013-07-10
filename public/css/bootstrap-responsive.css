@@ -133,6 +133,17 @@
   .navbar-fixed-bottom .container {
     
   }
+  .navbar-inner{
+      
+      
+    height: 100%;
+
+  }
+  .navbar-fixed-top {
+top: 0;
+bottom: 0;
+height: 100%;
+}
 #main {
 
     padding-left: 255px;

@@ -9,10 +9,13 @@ height:250px;
 max-width:350px;
 float: left;
 margin: 5px;
-list-style-type: none;}
+list-style-type: none;
 
+margin-right: 55px;}
 
-
+.hero-unit li {
+cursor: pointer;
+}
    #carousel {
             background: silver;
             overflow: hidden;
@@ -22,12 +25,13 @@ list-style-type: none;}
             -webkit-transform-style: preserve-3d;
         }
 
-        #carousel ul.animate {
+       .animate {
             -webkit-transition: all .3s;
             -moz-transition: all .3s;
             -o-transition: all .3s;
             transition: all .3s;
         }
+        
 
         #carousel ul {
             transform: translate3d(0%,0,0) scale3d(1,1,1);
@@ -47,6 +51,7 @@ list-style-type: none;}
         }
 
         #carousel li {
+            
             float: left;
             overflow: hidden;
             -webkit-transform-style: preserve-3d;
